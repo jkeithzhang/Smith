@@ -1,0 +1,13 @@
+.row#review-tbl
+	.table-container(ng-if="filter == 'free'")
+		table.table.table-striped.table-hover(ng-table="tableParams", show-filter="true")
+			tr(ng-repeat='node in $data', class="{{node.status}}")
+				td.col-md-2(style="text-align:center" title="'Name'" filter="{name: 'text'}" sortable="'name'") {{node.name}}
+				td.col-md-2(style="text-align:center" title="'Content'" filter="{content: 'text'}" sortable="'content'") {{node.content}}
+				td.col-md-2(style="text-align:center" title="'Type'" filter="{type: 'text'}" sortable="'type'") {{node.type}}
+	.table-container(ng-if="filter == 'config'")
+		.col-md-1.col-md-offset-5
+			a.btn.btn-primary(data-animation="am-fade-and-scale", data-placement="center", data-template='../partials/add-node-modal', bs-modal="modal") add review
+		.col-md-1
+			a.btn.btn-primary(data-animation="am-fade-and-scale", data-placement="center", data-template='../partials/delete-node-modal', bs-modal="modal") delete review
+

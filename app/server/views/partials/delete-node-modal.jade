@@ -1,0 +1,23 @@
+.modal
+	.modal-dialog
+		.modal-content
+			.modal-header
+				div.modal-title 
+					.label#modal-title Delete Review
+					button.close(ng-click='$hide()') x 
+
+			.modal-body
+				div.addNodePanel(ng-controller='nodeReviewCtrl')
+					form(ng-submit="removeNode(node)")
+						div 
+							div(flash-alert='error', active-class='in alert', class='fade')
+								span.alert-message {{flash.message}}
+							div(flash-alert='success', active-class='in alert', class='fade')
+								span.alert-message {{flash.message}}						
+						table.table.row
+							tr 
+								td
+									input.medium(ng-model='node.name', placeholder='name', required)
+							tr
+								td
+									button.btn.btn-primary(type="submit") Remove

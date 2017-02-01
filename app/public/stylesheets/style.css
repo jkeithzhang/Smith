@@ -1,0 +1,37 @@
+#review-tbl {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+#review-nav {
+	font-weight: bold;
+	font-size: 2em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.addNodePanel {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  text-align: center;
+}
+.addNodePanel input.medium {
+  width: 80%;
+}
+.addNodePanel select.medium {
+  width: 80%;
+  text-align: center;
+}
+.addNodePanel input.small {
+  width: 25%;
+}
+.addNodePanel .btn {
+  width: 60%;
+}
+.modal-title,
+.modal-body {
+  text-align: left;
+}
+#modal-title {
+	color:#aaaaaa;
+	font-size: 1.3em;
+	font-weight: bold;
+}

@@ -1,0 +1,50 @@
+extends layout
+
+block content
+	.navbar.top-nav
+		.container
+			.navbar-brand.col-md-6#review-nav Smith Review
+	.navbar.sub-nav(ng-controller='navCtrl', class="{{subNavClass}}")
+		.container
+			ul.nav.nav-tabs.sub-nav-tabs
+				li(ng-class="{active:isActive('/loadNodes/free')}")
+					a(href="#loadNodes/free") My reviews		
+				li(ng-class="{active:isActive('/loadNodes/config')}")
+					a(href="#loadNodes/config") Add/Delete
+	div.ng-view-class.row
+		div(ng-view)
+		
+
+block scripts
+
+	script(src='/vendor/underscore/underscore.js')
+	
+	//- Angular
+	script(src='/vendor/angular/angular/angular.min.js')
+	script(src='/vendor/angular/angular-animate/angular-animate.min.js')	
+	script(src='/vendor/angular/angular-resource/angular-resource.min.js')
+	script(src='/vendor/angular/angular-route/angular-route.min.js')
+	script(src='/vendor/angular/ngQuickDate/dist/ng-quick-date.min.js')
+
+
+	//- app
+	script(src='/javascripts/apps/_module.js')
+	script(src='/javascripts/apps/review.js')
+
+	//- controller
+	script(src='/javascripts/controllers/_module.js')
+	script(src='/javascripts/controllers/general.js')
+	script(src='/javascripts/controllers/review.js')
+
+	//- services
+	script(src='/javascripts/services/_module.js')	
+	script(src='/javascripts/services/general.js')
+	script(src='/javascripts/services/review.js')
+
+	script(src='/javascripts/filters.js')
+	script(src='/vendor/angular/angular-flash/dist/angular-flash.min.js')
+	script(src='/vendor/angular/angular-strap/dist/angular-strap.min.js')
+	script(src='/vendor/angular/angular-strap/dist/angular-strap.tpl.min.js')
+	script(src='/vendor/angular/spin.js/spin.js')
+	script(src='/vendor/angular/angular-spinner/angular-spinner.min.js')
+	script(src='/vendor/angular/ng-table/ng-table.min.js')
